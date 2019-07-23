@@ -10,7 +10,7 @@ set expandtab
 
 
 set mouse=a
-set clipboard=plus
+set clipboard=unnamedplus
 syntax on
 
 
