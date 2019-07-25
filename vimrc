@@ -1,4 +1,5 @@
 set number
+set relativenumber
 
 set shiftwidth=4
 set tabstop=4
@@ -22,6 +23,10 @@ autocmd filetype cpp map <C-d> <ESC> :2 <CR> :r ~/cpp_codes/debug.cpp <CR> :+28 
 autocmd filetype cpp map <C-m> <ESC> :2 <CR> :r ~/cpp_codes/modops.cpp <CR> :+24 <CR>
 autocmd filetype cpp map <F8> :!clear; g++ -std=c++17 -DLOCAL -Wall -Wshadow -Wextra -Wno-unused-result -O2 % -o %< <CR>
 autocmd filetype cpp map <F5> :!clear; ./%< <CR>
+autocmd filetype cpp map <C-c> ggVGy
+autocmd filetype python map <F5> :!python3 % <CR>
+
+
 
 set nocompatible              
 filetype off                  
@@ -33,5 +38,6 @@ Plugin 'git://git.wincent.com/command-t.git'
 Plugin 'sjl/badwolf'
 Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
 Plugin 'tpope/vim-commentary'
+Plugin 'SirVer/ultisnips'
 call vundle#end()            
 filetype plugin indent on    
